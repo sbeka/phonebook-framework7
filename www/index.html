@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body class="theme-bluegray">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+
+
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div class="page" data-page="index">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Phone Book</div>
+              </div>
+            </div>
+
+            <!-- Search Bar -->
+            <form data-search-list=".list-block-search" data-search-in=".fio" class="searchbar searchbar-init">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+              </div><a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+
+            <!-- Search Bar overlay-->
+            <div class="searchbar-overlay"></div>
+
+            <!-- Page content -->
+            <div class="page-content infinite-scroll">
+
+              <div class="content-block searchbar-not-found">
+                <div class="content-block-inner">Nothing found</div>
+              </div>
+
+              <div class="list-block list-block-search searchbar-found">
+                <ul id="list-users"></ul>
+              </div>
+              <!-- Preloader -->
+              <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/framework7.min.js"></script>
+  <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>
